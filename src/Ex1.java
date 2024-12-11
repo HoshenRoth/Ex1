@@ -33,6 +33,12 @@ public class Ex1 {
         public static boolean isNumber(String a) {
             boolean ans = true;
             // add your code here
+            if( a == null || !a.contains("b")){
+                ans = false;
+            }
+            else {
+                
+            }
 
             ////////////////////
             return ans;
