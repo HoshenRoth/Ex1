@@ -94,9 +94,14 @@ public class Ex1 {
 
         public static int maxIndex(String[] arr) {
             int ans = 0;
-            // add your code here
-
-            ////////////////////
+            int maxValue= Integer.MIN_VALUE;
+            for (int i=0; i< arr.length; i++) {
+                int value= number2Int(arr[i]);
+                if (value> maxValue) {
+                    maxValue= value;
+                    ans= i;
+                }
+            }
             return ans;
         }
 }
