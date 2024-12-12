@@ -30,7 +30,7 @@ public class Ex1 {
                         ans= false;
                     else {
                         int base= Integer.parseInt(baseArr);
-                        if (base<2 || base>16)
+                        if (base<1 || base>16)
                             ans= false;
                         else {
                             char[] charArray = number.toCharArray();
@@ -72,7 +72,7 @@ public class Ex1 {
 
         public static String int2Number(int num, int base) {
             String ans = "";
-            if (num>= 0 && base>= 2 && base<= 16 )
+            if (num>= 0 && base>= 1 && base<= 16 )
                 ans= Integer.toString(num, base).toUpperCase();
             return ans;
         }
