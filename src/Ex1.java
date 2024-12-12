@@ -31,7 +31,7 @@ public class Ex1 {
                         ans= false;
                     else {
                         int base= Integer.parseInt(baseArr);
-                        if (base<1 || base>16)
+                        if (base<2 || base>16)
                             ans= false;
                         else {
                             char[] charArray = number.toCharArray();
@@ -74,7 +74,7 @@ public class Ex1 {
         //Supports bases from 1 to 16. Returns an empty string for invalid inputs.
         public static String int2Number(int num, int base) {
             String ans = "";
-            if (num>= 0 && base>= 1 && base<= 16 )
+            if (num>= 0 && base>= 2 && base<= 16 )
                 ans= Integer.toString(num, base).toUpperCase();
             return ans;
         }
