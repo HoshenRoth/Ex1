@@ -12,8 +12,7 @@ public class Ex1 {
             return ans;
         }
 
-
-
+        
         public static boolean isNumber(String a) {
             boolean ans = true;
             // add your code here
@@ -68,8 +67,7 @@ public class Ex1 {
             return ans;
         }
 
-
-
+        
         public static String int2Number(int num, int base) {
             String ans = "";
             if (num>= 0 && base>= 1 && base<= 16 )
@@ -77,9 +75,7 @@ public class Ex1 {
             return ans;
         }
 
-
-
-
+        
         public static boolean equals(String n1, String n2) {
             boolean ans = true;
             int decimal1= number2Int(n1);
@@ -89,9 +85,7 @@ public class Ex1 {
             return ans;
         }
 
-
-
-
+        
         public static int maxIndex(String[] arr) {
             int ans = 0;
             int maxValue= Integer.MIN_VALUE;

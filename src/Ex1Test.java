@@ -34,14 +34,35 @@ public class Ex1Test {
                 assertFalse(not_ok);
             }
         }
+
         @Test
         void int2NumberTest() {
-           // implement this test
-        }
-        @Test
-        void maxIndexTest() {
-            // implement this test
+           assertEquals("1010", assignments.ex1.Ex1.int2Number(10, 2));
+            assertEquals("FF", assignments.ex1.Ex1.int2Number(255, 16));
+            assertEquals("0", assignments.ex1.Ex1.int2Number(0, 10));
+            assertEquals("1", assignments.ex1.Ex1.int2Number(1, 1));
+            assertEquals("", assignments.ex1.Ex1.int2Number(10, 17));
+            assertEquals("", assignments.ex1.Ex1.int2Number(10, 0);
         }
 
-        // Add additional test functions - test as much as you can.
-    }
+        @Test
+        void maxIndexTest() {
+            String[] arr1= {"1b2", "10b2", "11b2"};
+            assertEquals(2, assignments.ex1.Ex1.maxIndex(arr1));
+            String[] arr2= {"1b2", "ab2", "11b2"};
+            assertEquals(2, assignments.ex1.Ex1.maxIndex(arr2));
+            String[] arr3= {"ab2", "bc3", "cd4"};
+            assertEquals(0, assignments.ex1.Ex1.maxIndex(arr3));
+            String[] arr4= {"0b2", "0b2", "0b2"};
+            assertEquals(0, assignments.ex1.Ex1.maxIndex(arr4));
+
+        }
+
+       @Test
+       void equalsTest(){
+            assertTrue(assignments.ex1.Ex1.equals("1011b2", "11b10"));
+            assertFalse(assignments.ex1.Ex1.equals("1011b2", "10b10"));
+            assertFalse(assignments.ex1.Ex1.equals("1011b2", "1b17"));
+            assertFalse(assignments.ex1.Ex1.equals("1011b2", "1bb2"));}
+       }
+}
