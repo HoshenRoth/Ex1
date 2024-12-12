@@ -1,6 +1,8 @@
 package assignments.ex1;
 public class Ex1 {
 
+        //Converts a number in the format "<number>b<base>" to an integer in decimal.
+        //Returns -1 if the input is not a valid number.
         public static int number2Int(String num) {
             int ans = -1;
             if (isNumber(num)){
@@ -12,10 +14,10 @@ public class Ex1 {
             return ans;
         }
 
-        
+        //Checks if a given string is a valid number in the format "<number>b<base>".
+        //Returns true if valid, false otherwise.
         public static boolean isNumber(String a) {
             boolean ans = true;
-            // add your code here
             if (a == null || !a.contains("b"))
                 ans = false;
             else {
@@ -50,7 +52,8 @@ public class Ex1 {
             return ans;
         }
 
-
+        //Checks if a given string represents a valid base between 1 and 16.
+        //Returns true if valid, false otherwise.
         public static boolean isGood(String s) {
             boolean ans= true;
             if (s == null || s.isEmpty())
@@ -67,7 +70,8 @@ public class Ex1 {
             return ans;
         }
 
-        
+        //Converts a decimal integer to its string representation in a given base.
+        //Supports bases from 1 to 16. Returns an empty string for invalid inputs.
         public static String int2Number(int num, int base) {
             String ans = "";
             if (num>= 0 && base>= 1 && base<= 16 )
@@ -75,7 +79,8 @@ public class Ex1 {
             return ans;
         }
 
-        
+        //Compares two numbers in the format "<number>b<base>".
+        //Returns true if they are equal, false otherwise.
         public static boolean equals(String n1, String n2) {
             boolean ans = true;
             int decimal1= number2Int(n1);
@@ -85,7 +90,8 @@ public class Ex1 {
             return ans;
         }
 
-        
+        //Finds the index of the maximum value in an array of strings in the format "<number>b<base>".
+        //Returns the index of the largest value or 0 if all values are invalid.
         public static int maxIndex(String[] arr) {
             int ans = 0;
             int maxValue= Integer.MIN_VALUE;
